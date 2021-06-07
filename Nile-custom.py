@@ -10,7 +10,7 @@ train = torch.Tensor(nile[:,-1][:n]).view(-1,1)
 test = torch.Tensor(nile[:,-1][n:]).view(-1,1)
 
 
-g = oracle(dist = ['Normal', 'Laplace', 't5', 'Cauchy'], device = 'cpu', 
+g = oracle(dist = ['Normal', 'Laplace', 't5', 'Cauchy'], 
            m = 500, num = 30, epochs = 200, N = 20, L = [0,1,2], D = [5,20,50], 
            lag = [30,50,70], tol = [0.5,5,20], PI = [0.5, 0.67, 0.95, 0.99], 
            split = 0.8, acquisition = 'EI', iterations = 20, lr = 0.005, 
@@ -18,7 +18,7 @@ g = oracle(dist = ['Normal', 'Laplace', 't5', 'Cauchy'], device = 'cpu',
 
 g.fit(train, metric = 'accuracy+uncertainty', surrogate = 'GP')
 point, intervals, ind_points = g.predict(future = len(test), return_ind = True)
-g.plot(point, intervals, test = test, plot_ind = True, ind_points = ind_points, legend = True, save_fig = True)
+g.plot(point, intervals, test = test, plot_ind = True, ind_points = ind_points, legend = True, save_fig = False)
 point_loss, interval_loss = g.loss(test, point, intervals, point_criterion = 'all', interval_criterion = 'scaled_pinball')
 prob = g.prob_increase()
 incr = g.expected_increase()

@@ -13,7 +13,7 @@ g = oracle()
 g.fit(train)
 point, intervals = g.predict(future = len(test))
 point_loss, interval_loss = g.loss(test, point, intervals)
-g.plot(point, intervals, test = test, save_fig = True)
+g.plot(point, intervals, test = test, save_fig = False)
 prob = g.prob_increase()
 incr = g.expected_increase()
 
