@@ -1,1 +1,1 @@
-Deep Skewed Heavy-Tailed Heteroscedastic Autoregressive Ensemble for Time Series Forecasting
+Ensemble of autoregressive deep neural networks for time series forecasting that explicitly handles skewness, heavy-taildness and heteroscedasticity. Model selection performed automatically using Bayesian Optimisation. 
