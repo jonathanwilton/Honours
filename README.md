@@ -14,4 +14,4 @@ AutoDF.py
 ```
 
 ## Usage
-```Nile-basic.py``` and ```Nile-custom.py``` give some example usages of the model on the Nile river dataset. A copy of the data in csv format is also provided. 
+```Nile-basic.py``` and ```Nile-custom.py``` give some example usages of the model on the Nile river dataset. A copy of the data in csv format ```Nile.csv``` is also provided. 
