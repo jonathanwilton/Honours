@@ -1,6 +1,8 @@
 # Time Series Forecasting using Deep Neural Networks
 Ensemble of autoregressive deep neural networks for time series forecasting that explicitly handles skewness, heavy-taildness and heteroscedasticity. Model selection and hyperparameter tuning is performed automatically using Bayesian Optimisation. 
 
+Slides with details on how the model works [here](https://drive.google.com/file/d/195v9FItuhBpdrY01i1cEDgnfLup8xZ97/view?usp=sharing).
+
 ## Requirements
 The current implementation makes use of the following Python packages (more recent versions are compatible, however older version may not be):
 ```
